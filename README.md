@@ -3,14 +3,13 @@ Apache Kafka es una plataforma distribuida de transmisión de datos que permite 
 
 Apache Kafka es la alternativa a un sistema de mensajería empresarial tradicional. Comenzó como un sistema interno que LinkedIn desarrolló para manejar 1.4 billones de mensajes por día. Ahora, es una solución open source de transmisión de datos con aplicaciones para diversas necesidades empresariales.
 
-## Documentación 
+## Documentación :notebook:
 * https://kafka.apache.org/documentation/
-##Quick Start
 * https://kafka.apache.org/documentation/#quickstart
-## Instalación de Apache Kafka
+## Instalación de Apache Kafka :inbox_tray:
 * Instalar Java 8
 * Descargar ultima versión estable de Apache Kafka https://kafka.apache.org/downloads
-## Configuración de variables de entorno
+## Configuración de variables de entorno :hammer:
 ### Windows
 * JAVA_HOME=<JAVA_DIR>
 * KAFKA_HOME=<KAFKA_DIR>
@@ -25,9 +24,11 @@ Apache Kafka es la alternativa a un sistema de mensajería empresarial tradicion
 * bin\windows\kafka-server-start.bat config\server.properties (iniciar broker kafka)
 * kafka-topics.bat --bootstrap-server localhost:9092 --create --topic crisda24-topic --partitions 40 --replication-factor 1 (Crear topic)
 * kafka-topics.bat --list --bootstrap-server localhost:9092 (Listar topics)
+*  bin\windows\kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 ### Linux
 * bin/zookeeper-server-start.sh config/zookeeper.properties
 * bin/kaf ka-server-start.sh config/server.properties
 * bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic crisda24-topic --partitions 40 --replication-factor 1
 * kafka-topics.sh --list --bootstrap-server localhost:9092
+*  bin/kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 
