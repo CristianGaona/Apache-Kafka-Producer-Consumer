@@ -18,7 +18,7 @@ Apache Kafka es la alternativa a un sistema de mensajería empresarial tradicion
 * JAVA_HOME=<JAVA_DIR>
 * KAFKA_HOME=<KAFKA_DIR>
 * PATH=%JAVA_HOME%\bin;%KAFKA_HOME%\bin\windows;
-## Comandos Kafka:
+## Comandos Kafka :newspaper:
 ### Windows
 * bin\windows\zookeeper-server-start.bat config\zookeeper.properties (Iniciar servidor zookeeper)
 * bin\windows\kafka-server-start.bat config\server.properties (iniciar broker kafka)

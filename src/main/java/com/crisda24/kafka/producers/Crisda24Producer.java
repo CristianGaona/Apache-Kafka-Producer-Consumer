@@ -44,7 +44,7 @@ public class Crisda24Producer {
 		// El tiempo de procesamiento es de: 1134 ms
 		// El tiempo de procesamiento es de: 1037 ms
 		//El tiempo de procesamiento es de: 1666 ms
-
+        // El tiempo de procesamiento es de: 980 ms
 		log.info("El tiempo de procesamiento es de: {} ms", (System.currentTimeMillis()-startTime));
 	}
 	
