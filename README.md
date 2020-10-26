@@ -22,8 +22,9 @@ Apache Kafka es la alternativa a un sistema de mensajería empresarial tradicion
 ### Windows
 * bin\windows\zookeeper-server-start.bat config\zookeeper.properties (Iniciar servidor zookeeper)
 * bin\windows\kafka-server-start.bat config\server.properties (iniciar broker kafka)
-* kafka-topics.bat --bootstrap-server localhost:9092 --create --topic crisda24-topic --partitions 40 --replication-factor 1 (Crear topic)
+* kafka-topics.bat --bootstrap-server localhost:9092 --create --topic crisda24-topic --partitions 5 --replication-factor 1 (Crear topic)
 * kafka-topics.bat --list --bootstrap-server localhost:9092 (Listar topics)
+kafka-topics.bat --describe --topic crisda24-topic --bootstrap-server localhost:9092 (especificación)
 *  bin\windows\kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 *  bin/kafka-console-producer.bat --topic crisda24-topic --bootstrap-server localhost:9092
 ### Linux
@@ -31,6 +32,7 @@ Apache Kafka es la alternativa a un sistema de mensajería empresarial tradicion
 * bin/kaf ka-server-start.sh config/server.properties
 * bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic crisda24-topic --partitions 40 --replication-factor 1
 * kafka-topics.sh --list --bootstrap-server localhost:9092
+* kafka-topics.sh --describe --topic crisda24-topic --bootstrap-server localhost:9092
 *  bin/kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 *  bin\windows\kafka-console-producer.bat --topic crisda24-topic --bootstrap-server localhost:9092
 

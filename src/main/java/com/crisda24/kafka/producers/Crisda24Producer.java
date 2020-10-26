@@ -35,7 +35,7 @@ public class Crisda24Producer {
 		
 		//Método asíncrono
 		try(Producer <String, String> producer = new KafkaProducer<>(props);){
-			for (int i = 0; i<1000; i++) {
+			for (int i = 0; i<10000; i++) {
 				producer.send(new ProducerRecord<String, String>("crisda24-topic", String.valueOf(i), "crisda24-value"));
 			}
 			producer.flush();

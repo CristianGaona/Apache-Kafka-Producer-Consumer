@@ -27,7 +27,7 @@ public class Crisda24Multithread {
 			Crisda24ThreadConsumer consumer = new Crisda24ThreadConsumer(new KafkaConsumer<>(props));
 			executor.execute(consumer);
 		}
-		while(executor.isTerminated());
+		while(!executor.isTerminated());
 	}
 	
 }
