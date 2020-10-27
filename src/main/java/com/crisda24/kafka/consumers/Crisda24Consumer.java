@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.TopicPartition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +24,10 @@ public class Crisda24Consumer {
 		props.setProperty("key.deserializer","org.apache.kafka.common.serialization.StringDeserializer");
 		props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 		try(KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)){
-			consumer.subscribe(Arrays.asList("crisda24-topic"));
+			//consumer.subscribe(Arrays.asList("crisda24-topic"));
+			TopicPartition topicPartition = new TopicPartition("crisda24-topic", 1);
+			consumer.assign(Arrays.asList(topicPartition));
+			consumer.seek(topicPartition, 50);
 			while(true) {
 				ConsumerRecords<String, String> consumerRecords=consumer.poll(Duration.ofMillis(100));
 				for (ConsumerRecord<String, String> consumerRecord : consumerRecords) {

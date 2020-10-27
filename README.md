@@ -35,4 +35,3 @@ kafka-topics.bat --describe --topic crisda24-topic --bootstrap-server localhost:
 * kafka-topics.sh --describe --topic crisda24-topic --bootstrap-server localhost:9092
 *  bin/kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 *  bin\windows\kafka-console-producer.bat --topic crisda24-topic --bootstrap-server localhost:9092
-
