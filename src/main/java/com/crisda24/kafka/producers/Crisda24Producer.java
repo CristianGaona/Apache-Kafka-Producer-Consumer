@@ -36,15 +36,12 @@ public class Crisda24Producer {
 		//Método asíncrono
 		try(Producer <String, String> producer = new KafkaProducer<>(props);){
 			for (int i = 0; i<10000; i++) {
-				producer.send(new ProducerRecord<String, String>("crisda24-topic", String.valueOf(i), "crisda24-value"));
+				producer.send(new ProducerRecord<String, String>("crisda24-topic", (i % 2 ==0) ? "Key-2.1" : "key-3.1", String.valueOf(i)));
 			}
 			producer.flush();
 			
 		}
-		// El tiempo de procesamiento es de: 1134 ms
-		// El tiempo de procesamiento es de: 1037 ms
-		//El tiempo de procesamiento es de: 1666 ms
-        // El tiempo de procesamiento es de: 980 ms
+
 		log.info("El tiempo de procesamiento es de: {} ms", (System.currentTimeMillis()-startTime));
 	}
 	
