@@ -35,3 +35,10 @@ kafka-topics.bat --describe --topic crisda24-topic --bootstrap-server localhost:
 * kafka-topics.sh --describe --topic crisda24-topic --bootstrap-server localhost:9092
 *  bin/kafka-console-consumer.bat --topic crisda24-topic --from-beginning --bootstrap-server localhost:9092 --property print.key=true --property key.separator="-"
 *  bin\windows\kafka-console-producer.bat --topic crisda24-topic --bootstrap-server localhost:9092
+### Ejemplos en Java utilizando Productores y consumidores
+* https://github.com/CristianGaona/Apache-Kafka-Producer-Consumer/tree/master/src/main/java/com/crisda24/kafka
+### Kafka cheat sheet
+* https://github.com/CristianGaona/Apache-Kafka-Producer-Consumer/blob/master/1.1%2BApache%2BKafka%2B-%2BMaterial.pdf
+### Referencias
+* [Apache Kafka con Java, Spring framework y AWS](https://www.udemy.com/course/apache-kafka-es/) de Alejandro Agapito Bautista 
+* [Apache Kafka Docs](https://kafka.apache.org/documentation/)
